@@ -1,0 +1,6 @@
+[flake8]
+max-line-length = 100
+exclude = .git,__pycache__,.venv
+
+max-lines = 1000
+max-imports = 15

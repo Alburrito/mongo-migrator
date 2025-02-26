@@ -1,0 +1,53 @@
+[project]
+name = "mongo-migrator"
+version = "1.0.0rc1"
+description = "Simple MongoDB migrations tool."
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+authors = [
+    {name = "Álvaro Martín López",email = "almarlop.dev@gmail.com"}
+]
+keywords = [
+    "database", "mongo", "mongodb", "pymongo",
+    "python", "migration"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pymongo (>=4.11.1,<5.0.0)"
+]
+
+[project.urls]
+repository = "https://github.com/Alburrito/mongo-migrator"
+
+[project.scripts]
+mongo-migrator = "mongo_migrator.cli:main"
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+mongomock = "^4.3.0"
+ipdb = "^0.13.13"
+flake8 = "^7.1.2"
+black = "^25.1.0"
+tox = "^4.24.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
