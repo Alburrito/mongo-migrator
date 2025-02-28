@@ -18,7 +18,7 @@ test-cov:
 tox:
 	$(run) tox -q
 
-check: format style test tox
+check: format style tox
 	@echo "All checks passed"
 
 publish:

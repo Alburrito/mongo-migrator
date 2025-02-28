@@ -2,14 +2,12 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/mongo-migrator.svg)](https://badge.fury.io/py/mongo-migrator)
+![Python Versions](https://img.shields.io/pypi/pyversions/mongo-migrator)
+![MongoDB](https://img.shields.io/badge/MongoDB-%3E%3D4.0-brightgreen)
 
-![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
-![MongoDB](https://img.shields.io/badge/mongodb-4.4-blue.svg)
+![logo](./mongo-migrator.jpg)
 
-[![Coverage Status](https://coveralls.io/repos/github/Alburrito/mongo-migrator/badge.svg?branch=main)](https://coveralls.io/github/Alburrito/mongo-migrator?branch=main)
-[![Build Status](https://travis-ci.com/Alburrito/mongo-migrator.svg?branch=main)](https://travis-ci.com/Alburrito/mongo-migrator)
-
-
+## Summary
 
 Mongo Migrator is a simple tool to manage MongoDB migrations. It allows you to create, run, and rollback migrations in a MongoDB database.
 
@@ -49,13 +47,13 @@ collection = version_history
 
 ### Configuration breakdown
 
-- database: MongoDB connection details.
+- **database**: MongoDB connection details.
     - host: MongoDB host address.
     - port: MongoDB port number.
     - name: The database name where migrations will be applied.
     - user: (Optional) The username for database authentication.
     - password: (Optional) The password for database authentication.
-- migrations: Migration settings.
+- **migrations**: Migration settings.
     - directory: Directory where migration files are stored.
     - collection: Name of the collection that stores migration version information.
 
@@ -78,7 +76,7 @@ This command initializes the migration system by reading the configuration file,
 To create a new migration, run the following command:
 
 ```bash
-mongo-migrator create --title "Added new field"
+mongo-migrator create "Added new field"
 ```
 
 This command generates a new migration file with a timestamp and the provided title. The new migration file will be placed in the migrations directory.
@@ -117,47 +115,33 @@ This command displays the migration history, showing the version number and the 
 
 ### Other commands
 
-- `mongo-migrator --help`: Display the help message.
-- `mongo-migrator --version`: Display the package version.
+- `mongo-migrator [ -h | --help ]`: Display the help message.
+- `mongo-migrator [ -v | --version ]`: Display the package version.
 
 
-## Test environment
+## Examples
 
-This repository comes with a folder `test-project` which can be run to test the mongo-migrator package. It also contains `example-project`, which is the same small project as `test-project` already initialized and with some migrations made.
+You can find example projects in the repository [mongo-migrator-examples](https://github.com/Alburrito/mongo-migrator-examples).
 
-The following dependencies are required to run the example project:
-- Docker
-- Docker Compose
-- Python 3.8 or higher
-- pipenv
+There you will find:
 
-### Setup of the test environment
-1. First of all, go to the `test-project` folder and activate the environment:
-```bash
-cd test-project
-export PIPENV_VENV_IN_PROJECT=1 # Optional, but recommended
-pipenv shell
-pipenv install
-```
-
-2. Use the `docker-compose.yml` file to start a MongoDB instance:
-```bash
-docker-compose up -d
-```
-
-3. Run the setup script
-```bash
-python3 setup-test-db.py
-```
-The script will create a database called `test-db` and a collection called `test-collection` with some sample data.
-
-4. Now the environment is ready to be tested.
+- [**example-project**](https://github.com/Alburrito/mongo-migrator-examples/tree/main/example-project): An already initialized project with some migrations created.
+- [**test-project**](https://github.com/Alburrito/mongo-migrator-examples/tree/main/test-project): The same project as `example-project` but not initialized. It can be used to test the mongo-migrator package.
 
 
 # Contributing
 
-By the time, contributions are not being accepted. However, [issues](https://github.com/Alburrito/mongo-migrator/issues) will be reviewed and answered.
+By the time, contributions are not being accepted. [Issues](https://github.com/Alburrito/mongo-migrator/issues), on the other hand, will be reviewed and answered.
+
+However, feel free to fork the repository and make your own changes if needed.
+
 
 # License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Package by [Álvaro Martín López](https://github.com/Alburrito)
+
+Banner by [Sergio Gallego García](https://www.linkedin.com/in/sergio-gallego-garc%C3%ADa-14379b245/)
