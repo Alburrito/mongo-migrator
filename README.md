@@ -5,7 +5,7 @@
 ![Python Versions](https://img.shields.io/pypi/pyversions/mongo-migrator)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%3E%3D4.0-brightgreen)
 
-![logo](./mongo-migrator.jpg)
+![logo](https://github.com/Alburrito/mongo-migrator/blob/main/mongo-migrator.jpg?raw=true)
 
 ## Summary
 

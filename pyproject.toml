@@ -1,6 +1,6 @@
 [project]
 name = "mongo-migrator"
-version = "1.0.0"
+version = "1.0.1"
 description = "Simple MongoDB migrations tool."
 license = "MIT"
 license-files = ["LICEN[CS]E*"]

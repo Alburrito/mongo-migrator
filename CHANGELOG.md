@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [v1.0.1] - 2025-28-02
+### Features
+- None
+
+### Changes
+- None
+
+### Fixes
+- Banner image in README.md changed to github path so PyPI can render it correctly.
+
 ## [v1.0.0] - 2025-27-02
 Stable first release of the package.
 
